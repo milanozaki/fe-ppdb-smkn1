@@ -260,6 +260,48 @@ export default function Page() {
           </div>
         </div>
 
+
+      {/* Tabel Dokumen */}
+      <div className="mt-8 mb-10">
+        <h2 className="text-xl ml-5 font-bold text-gray-800">Dokumen Terkait</h2>
+        <div className="overflow-x-auto mt-4">
+          <table className="min-w-[550px] ml-5 border-collapse border border-gray-300 rounded-lg shadow-md">
+            <thead>
+              <tr>
+                <th className="py-2 px-4 text-left text-gray-800 border-b border-gray-300">No</th>
+                <th className="py-2 px-4 text-left text-gray-800 border-b border-gray-300">File</th>
+                <th className="py-2 px-4 text-left text-gray-800 border-b border-gray-300">Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { no: 1, file: 'link1.pdf', keterangan: 'Dokumen pertama' },
+                { no: 2, file: 'link2.pdf', keterangan: 'Dokumen kedua' },
+                { no: 3, file: 'link3.pdf', keterangan: 'Dokumen ketiga' },
+              ].map((item) => (
+                <tr key={item.no} className="hover:bg-gray-50">
+                  <td className="py-2 px-4 text-gray-700 border">
+                    {item.no}
+                  </td>
+                  <td className="py-2 px-4 border">
+                    <a
+                      href={item.file}
+                      className="text-blue-600 hover:text-blue-800 hover:underline"
+                      download
+                    >
+                      {item.file}
+                    </a>
+                  </td>
+                  <td className="py-2 px-4 text-gray-700 border">
+                    {item.keterangan}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
         {/* Tambahan Gambar Besar */}
         <div className="mt-10 flex justify-center">
           <img
@@ -298,186 +340,144 @@ export default function Page() {
 
       {/* Program Keahlian */}
       <section
-      id="program-keahlian"
-      className="p-6 bg-gradient-to-b from-transparent to-blue-200 text-center"
-    >
-      <h1 className="text-2xl font-bold text-green-900 flex items-center justify-center gap-2">
-        <Briefcase className="w-6 h-6 text-green-900" /> Program Keahlian
-      </h1>
-      <p className="mt-2 text-gray-700 text-sm">
-        Menawarkan 8 program konsentrasi keahlian yang dirancang untuk membekali siswa dengan keterampilan dan pengetahuan sesuai dengan kebutuhan industri.
-      </p>
-
-      <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-        {/* Contoh Data Jurusan (Ganti dengan data Anda) */}
-        {[
-          {
-            nama: "Akuntansi dan Keuangan Lembaga",
-            cover: "images/jurusan/akutansi.jpg",
-          },
-          {
-            nama: "Desain & Produksi Busana",
-            cover: "images/jurusan/busanabutik.jpg",
-          },
-          {
-            nama: "Desain Komunikasi Visual",
-            cover: "images/jurusan/dkv.jpg",
-          },
-          {
-            nama: "Pengembangan Perangkat Lunak & Game",
-            cover: "images/jurusan/rpl.jpg",
-          },
-          {
-            nama: "Teknik Kendaraan Ringan",
-            cover: "images/jurusan/tkr.jpg",
-          },
-          {
-            nama: "Teknik Komputer & Jaringan",
-            cover: "images/jurusan/tkj.jpg",
-          },
-          {
-            nama: "Teknik Pemesinan",
-            cover: "images/jurusan/tp.jpg",
-          },
-          {
-            nama: "Teknik Pengelasan",
-            cover: "images/jurusan/tpl.jpg",
-          },
-        ].map((jurusan, index) => (
-          <div
-            key={index}
-            className="rounded-lg shadow-md overflow-hidden bg-white flex flex-col md:flex-row"
-          >
-            <img
-              src={jurusan.cover}
-              alt={`Cover Jurusan ${jurusan.nama}`}
-              className="w-full md:w-48 h-32 md:h-auto object-contain"
-            />
-            <div className="p-2 flex-grow">
-              <h2 className="text-sm font-semibold text-gray-800 text-center md:text-left">
-                {jurusan.nama}
-              </h2>
-            </div>
-          </div>
-        ))}
-      </div>
-      <button className="mt-4 relative border border-[#246c33] font-bold py-2 px-6 rounded-full overflow-hidden transition-all duration-300 group">
-        <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#0aaf2b] to-[#246c33] transform translate-x-[-100%] group-hover:translate-x-[0%] transition-transform duration-300"></span>
-        <span className="relative text-[#246c33] group-hover:text-white">Selengkapnya &gt;&gt; </span>
-      </button>
-
-      <hr className="mt-6 border-[#246c33] border-2" />
-    </section>
-
-    <div className="mt-8 mb-10">
-  <h2 className="text-xl ml-5 font-bold text-gray-800">Dokumen Terkait</h2>
-  <div className="overflow-x-auto mt-4">
-    <table className="min-w-[600px] ml-5 border-collapse border border-gray-300 rounded-lg shadow-md">
-      <thead>
-        <tr>
-          <th className="py-2 px-4 text-left text-gray-800 border-b border-gray-300">No</th>
-          <th className="py-2 px-4 text-left text-gray-800 border-b border-gray-300">File</th>
-          <th className="py-2 px-4 text-left text-gray-800 border-b border-gray-300">Keterangan</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          { no: 1, file: 'link1.pdf', keterangan: 'Dokumen pertama' },
-          { no: 2, file: 'link2.pdf', keterangan: 'Dokumen kedua' },
-          { no: 3, file: 'link3.pdf', keterangan: 'Dokumen ketiga' },
-        ].map((item) => (
-          <tr key={item.no} className="hover:bg-gray-50">
-            <td className="py-2 px-4 text-gray-700 border">
-              {item.no}
-            </td>
-            <td className="py-2 px-4 border">
-              <a
-                href={item.file}
-                className="text-blue-600 hover:text-blue-800 hover:underline"
-                download
-              >
-                {item.file}
-              </a>
-            </td>
-            <td className="py-2 px-4 text-gray-700 border">
-              {item.keterangan}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</div>
-
-      
-{/* FAQ Section */}
-<section id="faq" className="p-6 bg-gray-50">
-  <div className="max-w-4xl mx-auto">
-    <div className="text-center mb-8">
-      <h1 className="text-2xl font-bold text-green-900">FAQ</h1>
-      <p className="mt-4 text-gray-600">Temukan jawaban atas pertanyaan umum seputar PPDB</p>
-    </div>
-
-    <div className="space-y-4">
-      {[
-        {
-          question: "Apa itu Penerimaan Peserta Didik Baru (PPDB)?",
-          answer: "PPDB adalah proses pendaftaran siswa baru di sekolah, termasuk syarat dan jalur pendaftaran yang harus dipenuhi.",
-        },
-        {
-          question: "Bagaimana cara mendaftar?",
-          answer: "Calon siswa dapat mendaftar secara online melalui website resmi atau secara langsung di sekolah.",
-        },
-        {
-          question: "Apa saja syarat yang dibutuhkan untuk mendaftar?",
-          answer: "Syarat pendaftaran meliputi dokumen identitas, rapor, dan dokumen pendukung lainnya.",
-        },
-        {
-          question: "Kapan jadwal PPDB berlangsung?",
-          answer: "Jadwal PPDB dapat dilihat di bagian berita terbaru di website ini.",
-        },
-      ].map((faq, index) => (
-        <div 
-          key={index}
-          className="group rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200"
-        >
-          <div 
-            className="flex items-center justify-between p-4 cursor-pointer"
-            onClick={() => {
-              const answerElement = document.getElementById(`answer-${index}`);
-              if (answerElement) {
-                answerElement.classList.toggle('hidden');
-                answerElement.classList.toggle('animate-fadeIn');
-              }
-            }}
-          >
-            <h2 className="text-lg font-semibold text-gray-800 group-hover:text-green-900">
-              {faq.question}
-            </h2>
-          </div>
-          <p 
-            id={`answer-${index}`}
-            className="hidden p-4 pt-0 text-gray-600 border-t border-gray-100"
-          >
-            {faq.answer}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-    <div className="relative">
-    {/* Tanya Jawab Bubble */}
-    <div
-      className="fixed bottom-4 right-4 bg-[#246c33] text-white rounded-full p-3 shadow-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-[#0aaf2b] transition-all duration-300"
-        onClick={() => router.push("/tanya-jawab")}
+        id="program-keahlian"
+        className="p-6 bg-gradient-to-b from-transparent to-blue-200 text-center"
       >
-        <HelpCircle className="w-5 h-5" />
-        <span className="text-sm font-semibold">Tanya Admin</span>
+        <h1 className="text-2xl font-bold text-green-900 flex items-center justify-center gap-2">
+          <Briefcase className="w-6 h-6 text-green-900" /> Program Keahlian
+        </h1>
+        <p className="mt-2 text-gray-700 text-sm">
+          Menawarkan 8 program konsentrasi keahlian yang dirancang untuk membekali siswa dengan keterampilan dan pengetahuan sesuai dengan kebutuhan industri.
+        </p>
+
+        <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          {/* Contoh Data Jurusan (Ganti dengan data Anda) */}
+          {[
+            {
+              nama: "Akuntansi dan Keuangan Lembaga",
+              cover: "images/jurusan/akutansi.jpg",
+            },
+            {
+              nama: "Desain & Produksi Busana",
+              cover: "images/jurusan/busanabutik.jpg",
+            },
+            {
+              nama: "Desain Komunikasi Visual",
+              cover: "images/jurusan/dkv.jpg",
+            },
+            {
+              nama: "Pengembangan Perangkat Lunak & Game",
+              cover: "images/jurusan/rpl.jpg",
+            },
+            {
+              nama: "Teknik Kendaraan Ringan",
+              cover: "images/jurusan/tkr.jpg",
+            },
+            {
+              nama: "Teknik Komputer & Jaringan",
+              cover: "images/jurusan/tkj.jpg",
+            },
+            {
+              nama: "Teknik Pemesinan",
+              cover: "images/jurusan/tp.jpg",
+            },
+            {
+              nama: "Teknik Pengelasan",
+              cover: "images/jurusan/tpl.jpg",
+            },
+          ].map((jurusan, index) => (
+            <div
+              key={index}
+              className="rounded-lg shadow-md overflow-hidden bg-white flex flex-col md:flex-row"
+            >
+              <img
+                src={jurusan.cover}
+                alt={`Cover Jurusan ${jurusan.nama}`}
+                className="w-full md:w-48 h-32 md:h-auto object-contain"
+              />
+              <div className="p-2 flex-grow">
+                <h2 className="text-sm font-semibold text-gray-800 text-center md:text-left">
+                  {jurusan.nama}
+                </h2>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="mt-4 relative border border-[#246c33] font-bold py-2 px-6 rounded-full overflow-hidden transition-all duration-300 group">
+          <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#0aaf2b] to-[#246c33] transform translate-x-[-100%] group-hover:translate-x-[0%] transition-transform duration-300"></span>
+          <span className="relative text-[#246c33] group-hover:text-white">Selengkapnya &gt;&gt; </span>
+        </button>
+
+        <hr className="mt-6 border-[#246c33] border-2" />
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="p-6 bg-gray-50">
+          <div className="max-w-4xl ml-5">
+              <div className="mx-4 mb-8">
+                  <h1 className="text-2xl font-bold text-green-900">Orang lain juga bertanya</h1>
+              </div>
+
+              <div className="space-y-4">
+                  {[
+                      {
+                          question: "Apa itu Penerimaan Peserta Didik Baru (PPDB)?",
+                          answer: "PPDB adalah proses pendaftaran siswa baru di sekolah, termasuk syarat dan jalur pendaftaran yang harus dipenuhi.",
+                      },
+                      {
+                          question: "Bagaimana cara mendaftar?",
+                          answer: "Calon siswa dapat mendaftar secara online melalui website resmi atau secara langsung di sekolah.",
+                      },
+                      {
+                          question: "Apa saja syarat yang dibutuhkan untuk mendaftar?",
+                          answer: "Syarat pendaftaran meliputi dokumen identitas, rapor, dan dokumen pendukung lainnya.",
+                      },
+                      {
+                          question: "Kapan jadwal PPDB berlangsung?",
+                          answer: "Jadwal PPDB dapat dilihat di bagian berita terbaru di website ini.",
+                      },
+                  ].map((faq, index) => (
+                      <div
+                          key={index}
+                          className="rounded-lg bg-white shadow-sm border border-gray-200" // Menghapus hover:shadow-md dan transition-shadow
+                      >
+                          <div
+                              className="flex items-center justify-between p-4 cursor-pointer"
+                              onClick={() => {
+                                  const answerElement = document.getElementById(`answer-${index}`);
+                                  if (answerElement) {
+                                      answerElement.classList.toggle('hidden');
+                                      answerElement.classList.toggle('animate-fadeIn');
+                                  }
+                              }}
+                          >
+                              <h2 className="text-lg font-semibold text-gray-800"> {/* Menghapus group-hover:text-green-900 */}
+                                  {faq.question}
+                              </h2>
+                              <span className="text-gray-500">+</span> {/* Menambahkan ikon "+" */}
+                          </div>
+                          <p
+                              id={`answer-${index}`}
+                              className="hidden p-4 pt-0 text-gray-600 border-t border-gray-100"
+                          >
+                              {faq.answer}
+                          </p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </section>
+
+      {/* Tanya Jawab Bubble */}
+      <div className="relative">
+      <div
+        className="fixed bottom-4 right-4 bg-white border-[#246c33] border-2 text-[#246c33] rounded-full p-3 shadow-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-[#246c33] hover:border-[#246c33] hover:text-white transition-all duration-300"
+          onClick={() => router.push("/tanya-jawab")}
+        >
+          <HelpCircle className="w-5 h-5" />
+          <span className="text-sm font-semibold">Tanya Admin</span>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

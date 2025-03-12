@@ -165,125 +165,125 @@ function Navbar() {
 
 function Footer() {
   return (
-    <footer className="bg-[#2d9042] text-white py-12 w-full px-4">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<footer className="bg-gradient-to-r from-[#2d9042] to-[#1e6030] text-white py-12 w-full px-4">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Informasi Sekolah dan Alamat */}
-        <div className="md:col-span-2 md:px-4"> {/* Menambahkan md:px-4 untuk padding horizontal */}
-          <div className="flex items-center mb-4">
-            <img
-              src="/images/logosmk.png"
-              alt="Logo SMKN 1 Kota Bekasi"
-              className="w-8 h-8 mr-2"
-            />
-            <h3 className="font-semibold text-lg">SMK NEGERI 1 KOTA BEKASI</h3>
-          </div>
-          <p className="text-sm">
-            Jl. Bintara VIII No.2, RT.005/RW.003, Bintara, Kec. Bekasi Barat,
-            <br />
-            Kota Bks, Jawa Barat 17134.
-          </p>
+        <div className="md:col-span-2 md:px-4">
+            <div className="flex items-center mb-4">
+                <img
+                    src="/images/logosmk.png"
+                    alt="Logo SMKN 1 Kota Bekasi"
+                    className="w-8 h-8 mr-2"
+                />
+                <h3 className="font-semibold text-lg">SMK NEGERI 1 KOTA BEKASI</h3>
+            </div>
+            <p className="text-sm">
+                Jl. Bintara VIII No.2, RT.005/RW.003, Bintara, Kec. Bekasi Barat,
+                <br />
+                Kota Bks, Jawa Barat 17134.
+            </p>
         </div>
 
         {/* Media Sosial */}
         <div>
-          <h3 className="font-semibold text-lg mb-4">Media Sosial</h3>
-          <ul className="text-sm">
-            <li className="flex items-center mb-2">
-              <a
-                href="https://www.facebook.com/SMKN1KOTABEKASI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-300 flex items-center"
-              >
-                <img
-                  src="/images/facebook.png"
-                  alt="Facebook Logo"
-                  className="w-5 h-5 mr-2"
-                />
-                SMKN 1 KOTA BEKASI
-              </a>
-            </li>
-            <li className="flex items-center mb-2">
-              <a
-                href="https://www.instagram.com/smk1bks"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-300 flex items-center"
-              >
-                <img
-                  src="/images/instagram.png"
-                  alt="Instagram Logo"
-                  className="w-5 h-5 mr-2"
-                />
-                @smk1bks
-              </a>
-            </li>
-            <li className="flex items-center mb-2">
-              <a
-                href="https://www.youtube.com/@smknegeri1kotabekasi153"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-300 flex items-center"
-              >
-                <img
-                  src="/images/youtube.png"
-                  alt="YouTube Logo"
-                  className="w-5 h-5 mr-2"
-                />
-                SMKN 1 KOTA BEKASI
-              </a>
-            </li>
-          </ul>
+            <h3 className="font-semibold text-lg mb-4">Media Sosial</h3>
+            <ul className="text-sm">
+                <li className="flex items-center mb-2">
+                    <a
+                        href="https://www.facebook.com/SMKN1KOTABEKASI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 flex items-center"
+                    >
+                        <img
+                            src="/images/facebook.png"
+                            alt="Facebook Logo"
+                            className="w-5 h-5 mr-2"
+                        />
+                        SMKN 1 KOTA BEKASI
+                    </a>
+                </li>
+                <li className="flex items-center mb-2">
+                    <a
+                        href="https://www.instagram.com/smk1bks"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 flex items-center"
+                    >
+                        <img
+                            src="/images/instagram.png"
+                            alt="Instagram Logo"
+                            className="w-5 h-5 mr-2"
+                        />
+                        @smk1bks
+                    </a>
+                </li>
+                <li className="flex items-center mb-2">
+                    <a
+                        href="https://www.youtube.com/@smknegeri1kotabekasi153"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-300 flex items-center"
+                    >
+                        <img
+                            src="/images/youtube.png"
+                            alt="YouTube Logo"
+                            className="w-5 h-5 mr-2"
+                        />
+                        SMKN 1 KOTA BEKASI
+                    </a>
+                </li>
+            </ul>
         </div>
 
         {/* Kontak */}
         <div>
-          <h3 className="font-semibold text-lg mb-4">Kontak</h3>
-          <ul className="text-sm">
-            <li className="flex items-center mb-2">
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              (021) 88951151
-            </li>
-            <li className="flex items-center mb-2">
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.224 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              info@smkn1kotabekasi.sch.id
-            </li>
-          </ul>
+            <h3 className="font-semibold text-lg mb-4">Kontak</h3>
+            <ul className="text-sm">
+                <li className="flex items-center mb-2">
+                    <svg
+                        className="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                    </svg>
+                    (021) 88951151
+                </li>
+                <li className="flex items-center mb-2">
+                    <svg
+                        className="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.224 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                    </svg>
+                    info@smkn1kotabekasi.sch.id
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
 
-      {/* Copyright */}
-      <div className="text-center mt-8 border-t border-white pt-4">
-        <p className="text-white text-sm mt-4"> 
-          © 2025 by Rekayasa Perangkat Lunak SMKN 1 Kota Bekasi
+    {/* Copyright */}
+    <div className="text-center mt-8 border-t border-white pt-4">
+        <p className="text-white text-sm mt-4">
+            © 2025 by Rekayasa Perangkat Lunak SMKN 1 Kota Bekasi
         </p>
-      </div>
-    </footer>
+    </div>
+</footer>
   );
 }
